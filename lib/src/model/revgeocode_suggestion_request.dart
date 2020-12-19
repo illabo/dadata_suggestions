@@ -33,7 +33,13 @@ class RevgeocodeSuggestionRequest {
     _radiusMeters = value;
   }
 
-  RevgeocodeSuggestionRequest({this.latitude, this.longitude});
+  RevgeocodeSuggestionRequest({
+    this.latitude,
+    this.longitude,
+    this.count,
+    this.language,
+    radiusMeters,
+  });
 
   RevgeocodeSuggestionRequest.fromString(String latLon,
       {String delimiter = ','}) {

@@ -12,7 +12,8 @@ AddressSuggestionRadiusConstraint _$AddressSuggestionRadiusConstraintFromJson(
   return AddressSuggestionRadiusConstraint(
     latitude: (json['lat'] as num)?.toDouble(),
     longitude: (json['lon'] as num)?.toDouble(),
-  )..radiusMeters = json['radius_meters'] as int;
+    radiusMeters: json['radius_meters'] as int,
+  );
 }
 
 Map<String, dynamic> _$AddressSuggestionRadiusConstraintToJson(

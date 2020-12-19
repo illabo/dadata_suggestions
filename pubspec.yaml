@@ -1,6 +1,6 @@
 name: dadata_suggestions
-description: Dadata Address suggestions for Flutter.
-version: 0.1.0
+description: Dadata address suggestions for Flutter.
+version: 0.1.1
 repository: https://github.com/illabo/dadata_suggestions
 
 environment:

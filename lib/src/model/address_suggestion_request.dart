@@ -64,7 +64,17 @@ class AddressSuggestionRequest {
     _lowerBoundary = null;
   }
 
-  AddressSuggestionRequest(this.query);
+  AddressSuggestionRequest(
+    this.query, {
+    this.count,
+    this.language,
+    this.constraints,
+    this.radiusConstraints,
+    this.locationsPriority,
+    LevelBoundry upperBoundary,
+    LevelBoundry lowerBoundary,
+  })  : this._upperBoundary = upperBoundary,
+        this._lowerBoundary = lowerBoundary;
 
   factory AddressSuggestionRequest.fromJson(Map<String, dynamic> json) =>
       _$AddressSuggestionRequestFromJson(json);

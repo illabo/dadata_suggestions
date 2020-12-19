@@ -6,7 +6,7 @@ class AddressSuggestionPriority {
   @JsonKey(name: "kladr_id")
   String kladrId;
 
-  AddressSuggestionPriority();
+  AddressSuggestionPriority(this.kladrId);
 
   factory AddressSuggestionPriority.fromJson(Map<String, dynamic> json) =>
       _$AddressSuggestionPriorityFromJson(json);

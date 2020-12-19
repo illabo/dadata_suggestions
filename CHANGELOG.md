@@ -1,3 +1,3 @@
-## [0.1.0] - 19.12.2020.
+## [0.1.1] - 19.12.2020.
 
-* Initial release. Suggestions and reverse geocoding seem working.
+* Requests constructors extended to expose all the fields as named parameters.

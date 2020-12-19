@@ -54,7 +54,25 @@ class AddressSuggestionConstraint {
   @JsonKey(name: "street_fias_id")
   String streetFIASId;
 
-  AddressSuggestionConstraint();
+  AddressSuggestionConstraint({
+    this.region,
+    this.city,
+    this.streetTypeFull,
+    this.settlementTypeFull,
+    this.cityDistrictTypeFull,
+    this.cityTypeFull,
+    this.areaTypeFull,
+    this.regionTypeFull,
+    this.country,
+    this.countryISOCode,
+    this.regionISOCode,
+    this.kladrId,
+    this.regionFIASId,
+    this.areaFIASId,
+    this.cityFIASId,
+    this.settlementFIASId,
+    this.streetFIASId,
+  });
 
   factory AddressSuggestionConstraint.fromJson(Map<String, dynamic> json) =>
       _$AddressSuggestionConstraintFromJson(json);

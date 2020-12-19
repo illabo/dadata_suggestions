@@ -13,7 +13,11 @@ class AddressSuggestion {
   @JsonKey(name: 'data')
   SuggestionData data;
 
-  AddressSuggestion({this.value, this.unrestrictedValue, this.data});
+  AddressSuggestion({
+    this.value,
+    this.unrestrictedValue,
+    this.data,
+  });
 
   factory AddressSuggestion.fromJson(Map<String, dynamic> json) =>
       _$AddressSuggestionFromJson(json);
