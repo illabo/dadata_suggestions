@@ -1,7 +1,7 @@
 name: dadata_suggestions
 description: A new Flutter package project.
 version: 0.0.1
-author:
+repository: https://github.com/illabo/dadata_suggestions
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
