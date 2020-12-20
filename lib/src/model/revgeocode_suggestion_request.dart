@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'revgeocode_suggestion_request.g.dart';
 
+/// Used to call reverse geocoding API.
 @JsonSerializable(explicitToJson: true, nullable: true)
 class RevgeocodeSuggestionRequest {
   @JsonKey(name: "lat", required: true)
@@ -33,6 +34,9 @@ class RevgeocodeSuggestionRequest {
     _radiusMeters = value;
   }
 
+  ///New instance of [RevgeocodeSuggestionRequest].
+  ///[latitude] and [longitude] of the point of interest are required.
+  ///[count] defaults to `10` and [language] defaults to `ru`.
   RevgeocodeSuggestionRequest({
     this.latitude,
     this.longitude,
@@ -41,6 +45,9 @@ class RevgeocodeSuggestionRequest {
     radiusMeters,
   });
 
+  ///New instance may be created with query of [String] type instead of
+  ///a pair of [double]s.
+  ///Tries parse latitude and longitude out of string and throws if fails.
   RevgeocodeSuggestionRequest.fromString(String latLon,
       {String delimiter = ','}) {
     final llParts = latLon.split(delimiter);

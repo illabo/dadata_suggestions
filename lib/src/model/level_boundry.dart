@@ -1,6 +1,10 @@
+///Levels of `from_bound` and `to_bound` according to
+///Dadata online API documentation https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795.
 enum LevelBoundry { country, region, area, city, settlement, street, house }
 
+/// Helper extension of [LevelBoundry] enum.
 extension LevelBoundryValue on LevelBoundry {
+  /// Returns string value of a enum case.
   String get value {
     switch (this) {
       case LevelBoundry.country:
@@ -29,6 +33,8 @@ extension LevelBoundryValue on LevelBoundry {
     }
   }
 
+  /// Converts string [value] to enum case if available.
+  /// Please check [LevelBoundry] for available cases.
   static LevelBoundry forValue(String value) {
     switch (value) {
       case 'country':

@@ -1,5 +1,6 @@
 part of dadata_suggestions;
 
+/// Provides actual API calling.
 class DadataClient {
   final _client = Client();
   String _token;
@@ -16,6 +17,7 @@ class DadataClient {
     return DadataClient._internal().._token = token;
   }
 
+  /// Calls suggestions API with [AddressSuggestionRequest] provided.
   Future<AddressResponse> suggest(AddressSuggestionRequest query) async {
     try {
       final q = query.toJson();
@@ -25,6 +27,7 @@ class DadataClient {
     }
   }
 
+  /// Calls reverse geocoding API with [RevgeocodeSuggestionRequest] provided.
   Future<AddressResponse> revGeocode(RevgeocodeSuggestionRequest query) async {
     try {
       final q = query.toJson();

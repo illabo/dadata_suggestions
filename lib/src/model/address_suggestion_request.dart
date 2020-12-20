@@ -6,6 +6,7 @@ import 'address_suggestion_radius_constraint.dart';
 import 'level_boundry.dart';
 part 'address_suggestion_request.g.dart';
 
+///Used to call address sugestions API.
 @JsonSerializable(explicitToJson: true, nullable: true)
 class AddressSuggestionRequest {
   @JsonKey(name: 'query', required: true)
@@ -64,6 +65,10 @@ class AddressSuggestionRequest {
     _lowerBoundary = null;
   }
 
+  ///AddressSuggestionRequest represents an serializable object
+  ///used to perform suggestion queries.
+  ///[query] is required field.
+  ///[count] defaults to `10` and [language] defaults to `ru`.
   AddressSuggestionRequest(
     this.query, {
     this.count,
