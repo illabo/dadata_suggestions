@@ -43,7 +43,7 @@ class DadataClient {
   ) async {
     try {
       final resp = await _client.post(
-        endpoint,
+        Uri.parse(endpoint),
         headers: _headers,
         body: jsonEncode(query),
       );
